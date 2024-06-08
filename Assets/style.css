@@ -1,33 +1,90 @@
+:root {
+    --font-color: #ffffff;
+    --font-background: #2d6ea4;
+}
+
 header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    background-image: url(./Images/wood-background.jpg);
+    background-position: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1 {
-    font-size: 48px;
-    color: #14869f;
+    font-size: 60px;
+    color: var(--font-color);
+    background-color: var(--font-background);
     max-width: fit-content;
+    padding: 8px;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-
 .profile {
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 15%;
+    max-height: 15%;
     border: 3px solid black;
     border-radius: 75%;
 }
 
+img:hover {
+    box-shadow: 0px 0px 30px #ffffff;
+}
+
 nav ul {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    color: var(--font-color);
+    background-color: var(--font-background);
+}
+
+a {
+    color: inherit
+}
+
+body {
+    background-color: var(--font-background);
+    box-sizing: border-box;
+    position: static;
+}
+
+header li:hover {
+    text-decoration: underline 2px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    box-shadow: inset 0px 0px 50px #ffffff;
 
 }
 
-ul li {
+header ul li {
     font-size: 24px;
     padding: 16px;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--font-color);
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    flex: 35%;
+    display: block;
+    text-align: right;
+    padding-right: 5%;
+}
+
+section {
+    flex: 65%;
+    display: block;
 }
