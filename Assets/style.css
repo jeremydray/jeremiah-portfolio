@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    color: #14869f;
+    max-width: fit-content;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.profile {
+    max-width: 20%;
+    max-height: 20%;
+    border: 3px solid black;
+    border-radius: 75%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+ul li {
+    font-size: 24px;
+    padding: 16px;
+}
