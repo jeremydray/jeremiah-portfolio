@@ -1,6 +1,6 @@
 :root {
     --font-color: #ffffff;
-    --font-background: #2d6ea4;
+    --font-background: #225884;
 }
 
 header {
@@ -15,13 +15,14 @@ header {
     padding-left: 16px;
     padding-right: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 60px;
     color: var(--font-color);
     background-color: var(--font-background);
-    max-width: fit-content;
+    max-width: 300px;
     padding: 8px;
     margin-left: 20px;
     margin-top: 20px;
@@ -30,6 +31,7 @@ h1 {
 .profile {
     max-width: 15%;
     max-height: 15%;
+    margin: 25px;
     border: 3px solid black;
     border-radius: 75%;
 }
@@ -63,6 +65,18 @@ header li:hover {
 
 }
 
+#resume-tooltip:hover::after {
+    content: "Coming soon!!";
+    position: absolute;
+    right: 0%;
+    text-align: right;
+    border: 1px #aaaaaa solid;
+    background-color: #cb6464;
+    color: #fff;
+    font-size: 90%;
+    z-index: 1;
+}
+
 header ul li {
     font-size: 24px;
     padding: 16px;
@@ -71,6 +85,8 @@ header ul li {
 h2 {
     font-size: 36px;
     color: var(--font-color);
+    padding-right: 10px;
+    border-right: 3px solid black
 }
 
 main {
@@ -87,4 +103,78 @@ aside {
 section {
     flex: 65%;
     display: block;
+    align-items: space-between;
+}
+
+p {
+    font-size: 22px;
+    color: var(--font-color);
+    min-width: 144px;
+    max-width: 750px;
+    max-height: fit-content;
+}
+
+#about-me {
+    height: 300px;
+    margin-top: 15px;
+    margin-bottom: 10%;
+}
+
+#my-projects {
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 10%;
+}
+
+@media screen and (min-width: 768px) and (max-width:955px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    p {
+        font-size: 20px;
+        text-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .profile {
+        max-width: 30%;
+        max-height: 30%;
+        margin-top: 8%;
+        margin-bottom: 8%
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header ul li {
+        font-size: 18x;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: right;
+        text-wrap: nowrap
+    }
+
+    p {
+        font-size: 18px;
+        text-wrap: wrap;
+    }
+
 }
