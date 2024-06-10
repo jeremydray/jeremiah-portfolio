@@ -244,12 +244,24 @@ ol li {
 
 @media screen and (max-width: 416px) {
     .about-me-content {
-        height: 450px;
+        height: 440px;
+    }
+
+    figure img {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: left;
+        height: auto;
+        width: 150px;
+    }
+
+    .upcoming-projects {
+        width: 150px;
     }
 
     .my-projects-content {
-        height: 1350px;
+        height: 900px;
         max-width: auto;
     }
-
 }
