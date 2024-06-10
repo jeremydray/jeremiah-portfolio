@@ -194,17 +194,10 @@ ol li {
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 20px;
         text-align: right;
         text-wrap: nowrap;
         min-height: auto;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: left;
     }
 
     figure img {
@@ -213,7 +206,7 @@ ol li {
     }
 
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     figure img {
@@ -226,7 +219,7 @@ ol li {
     }
 
     .about-me-content {
-        height: 350px;
+        height: 400px;
     }
 
     .my-projects-content {
@@ -247,5 +240,12 @@ ol li {
         z-index: 2;
     }
 
+}
 
+@media screen and (max-width: 320px) {
+    * {
+        max-width: 320px;
+        font-size: 50%;
+
+    }
 }
