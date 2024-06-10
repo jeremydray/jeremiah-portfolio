@@ -1,0 +1,251 @@
+/*Variables set for the overall color scheme of the page */
+:root {
+    --font-color: #ffffff;
+    --font-background: #143e60;
+}
+
+/* Add styling to Header section, including background image, profile picture, and nav bar items */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../Images/wood-background.jpg);
+    background-position: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--font-color);
+    background-color: var(--font-background);
+    max-width: 300px;
+    padding: 8px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profile {
+    max-width: 15%;
+    max-height: 15%;
+    margin: 25px;
+    border: 3px solid black;
+    border-radius: 75%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: var(--font-color);
+    background-color: var(--font-background);
+}
+
+
+/*Set ID links to match the font color but hyperlinks to email and Github to more noticeable color*/
+a {
+    color: inherit
+}
+
+ol li a {
+    color: #ea7cfb
+}
+
+/* Add box-shadow hover to nav bar and a tooltip for the Resume item that does not yet have a link */
+header li:hover {
+    text-decoration: underline 2px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    box-shadow: inset 0px 0px 50px #ffffff;
+
+}
+
+#resume-tooltip:hover::after {
+    content: "Coming soon!!";
+    position: absolute;
+    right: 2%;
+    text-align: right;
+    border: 1px #aaaaaa solid;
+    background-color: #cb6464;
+    color: #fff;
+    font-size: 90%;
+    z-index: 2;
+}
+
+
+header ul li {
+    font-size: 24px;
+    padding: 16px;
+}
+
+/* Body and main content area */
+/* Apply flex to the child elements under this section*/
+main {
+    display: flex;
+}
+
+/* Add background color and style the headers in the aside element and the main content sections and the child items utilized */
+body {
+    background-color: var(--font-background);
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--font-color);
+    padding-right: 10px;
+    border-right: 3px solid black
+}
+
+aside {
+    flex: 30%;
+    display: block;
+    text-align: right;
+    padding-right: 5%;
+}
+
+section {
+    flex: 60%;
+    flex-flow: column wrap;
+}
+
+p {
+    font-size: 22px;
+    color: var(--font-color);
+    min-width: 144px;
+    max-width: 500px;
+    max-height: fit-content;
+}
+
+.about-me-content {
+    height: 300px;
+    margin-top: 15px;
+    margin-bottom: 5%;
+}
+
+.my-projects-content {
+    height: 1100px;
+    max-width: auto;
+}
+
+.contact-me-content {
+    height: 110px;
+}
+
+/* Add sizing/hover styling and flex display options for cluster of images */
+figure img {
+    opacity: 60%;
+    margin-bottom: 8px;
+    border: 3px solid #000000;
+    flex: 2 0 auto;
+}
+
+.upcoming-projects {
+    width: 245px;
+    max-width: 590px;
+}
+
+figure img:hover {
+    opacity: 100%;
+    box-shadow: 0px 0px 30px #ffffff;
+}
+
+footer {
+    display: flex;
+    margin-bottom: 5%
+}
+
+ol li {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--font-color);
+
+}
+
+/* Used in order to scale elements down when the max width is no more than 768px for laptops or smaller */
+@media screen and (max-width: 948px) {
+
+    header,
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .profile {
+        max-width: 30%;
+        max-height: 30%;
+        margin-top: 8%;
+        margin-bottom: 8%
+    }
+
+    header nav ul li {
+        font-size: 18x;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: right;
+        text-wrap: nowrap;
+        min-height: auto;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: left;
+    }
+
+    figure img {
+        width: auto;
+        height: auto;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    figure img {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: left;
+        height: auto;
+        width: 245px;
+    }
+
+    .about-me-content {
+        height: 350px;
+    }
+
+    .my-projects-content {
+        height: 1350px;
+        max-width: auto;
+    }
+
+    #resume-tooltip:hover::after {
+        content: "Coming soon!!";
+        position: absolute;
+        right: 35%;
+        left: 35%;
+        text-align: right;
+        border: 1px #aaaaaa solid;
+        background-color: #cb6464;
+        color: #fff;
+        font-size: 90%;
+        z-index: 2;
+    }
+
+
+}

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeremiah Ray's Portfolio</title>
-    <link rel="stylesheet" href="./Assets/reset.css" />
-    <link rel="stylesheet" href="./Assets/style.css" />
+    <link rel="stylesheet" href="./Assets/css/reset.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
 </head>
 
 <header>
@@ -26,25 +26,51 @@
 
     <body>
         <aside>
-            <h2 id="about-me">About Me</h2>
-            <h2 id="my-projects">My Projects</h2>
-            <h2 id="contact-me">Contact Me</h2>
+            <h2 id="about-me" class="about-me-content">About Me</h2>
+            <h2 id="my-projects" class="my-projects-content">My Projects</h2>
             </ul>
         </aside>
-        <section id="about-me">
-            <p>My name is Jeremiah Ray. I am a student in the SMU Boot Camp course, working towards learning how to code
+        <section>
+            <p class="about-me-content">My name is Jeremiah Ray. I am a student in the SMU Boot Camp course, working
+                towards learning how to code
                 and develop web applications. My developer experience is very limited, but between this bootcamp and
                 personal study, I am working towards expanding my knowledge of the vast amounts of programs, languages,
                 and methods in the field.
-            </p>
-            <br>
-            <p>Between studying and work, I enjoy visiting family and friends with any free time I have, as well as
+                <br>
+                <br>
+                Between studying and work, I enjoy visiting family and friends with any free time I have, as well as
                 playing video games, reading, or the never-ending journey to learn how to draw.
             </p>
-        </section>
-
+            <figure class="my-projects-content">
+                <img class="first-project" src="./Assets/Images/Normal.png" alt="Face Image for My Portfolio">
+                <br>
+                <img class="upcoming-projects" src="./Assets/Images/coming-soon-proj2.png"
+                    alt="Placeholder Image for Project 2">
+                <img class="upcoming-projects" src="./Assets/Images/coming-soon-proj3.png"
+                    alt="Placeholder Image for Project 3">
+                <br>
+                <img class="upcoming-projects" src="./Assets/Images/coming-soon-proj4.png"
+                    alt="Placeholder Image for Project 4">
+                <img class="upcoming-projects" src="./Assets/Images/coming-soon-proj5.png"
+                    alt="Placeholder Image for Project 5">
+            </figure>
+            <br>
         </section>
     </body>
 </main>
+
+<footer>
+    <aside>
+        <h2 id="contact-me" class="contact-me-content">Contact Me</h2>
+    </aside>
+    <section>
+        <ol>
+            <li><u>Phone:</u> (000) 123-4567</li>
+            <li><u>Email:</u> <a href>jeremydray@gmail.com</a></li>
+            <li><u>Repository:
+                </u><a href src="https://github.com/jeremydray/"> Github</a></li>
+        </ol>
+    </section>
+</footer>
 
 </html>
